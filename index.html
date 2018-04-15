@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>VISCOM</title>
+
+	<!-- <script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="sketch.js"></script> -->
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+	<script type="text/javascript" src = 'node_modules/svg.js/dist/svg.min.js'></script>
+	<link rel="stylesheet" href="index.css">
+	<style>
+		body {
+			margin:0;
+			padding:0;
+			/* overflow: hidden; */
+		}
+		button{
+			margin-bottom: 1em;
+			border: none;
+			padding: 0.5em 1.5em;
+			background-color: #ffd42a;
+			font-family: cursive;
+			font-style: oblique;
+			font-size: 200%;
+			color: #fff;
+			border-radius: 10px;
+			position: relative;
+			left: 50%;
+			transform: translate(-50%, 0%);
+		}
+		button:hover{
+			cursor: pointer;
+			box-shadow: 0 0 10px  #ffb82b;
+		}
+
+		canvas {
+			margin-top:2em;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="nav">
+			<center>
+			<div  class="emotions" name="emotions"></div>
+		</center>
+		</div>
+		<div class="colorSelector">
+			<div class="clselector">
+				<ul>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+				</ul>
+			</div>
+			<div class="skewing">
+				<label for="skewx">Zoom x </label>
+				<input type="checkbox" name="skewx" id="skewx">
+				<br/>
+				<label for="skewy">Zoom y </label>
+				<input type="checkbox" name="skewy" id="skewy">
+				<br/>
+				<label for="rotate">Rotate </label>
+				<input type="checkbox" name="rotate" id="rotate">
+			</div>
+			<br>
+			<div class="rules">
+				Once you place the shape on the canvas hover over it and scroll to perform the above actions.<br>
+				the action that is active above will be performed by scroll <br><br>
+
+				<i>ShortCuts :</i>  <br>
+				1. Press <b>X</b> to scale in x axis. <br>
+				2. Press <b>Y</b> to scale in y axis. <br>
+				3. Press <b>R</b> to Rotate. <br>
+				4. To remove a shape click on it and press Delete.
+			</div>
+			<div class="pickerHSL">
+				<div class="slidecontainer">
+  				<input type="range" min="0" max="360" value="50" class="slider" id="Hue">
+				</div>
+				<div class="slidecontainer">
+  				<input type="range" min="0" max="100" value="100" class="slider" id="Saturation">
+				</div>
+				<div class="slidecontainer">
+					<input type="range" min="0" max="100" value="50" class="slider" id="Lightness">
+				</div>
+			</div>
+		</div>
+		<div id="canvs">
+			<div id="drawboard" onmousemove="paintmovie(event)">
+
+			</div>
+			<div class="feedback">
+				<button type="button" name="Next" id="NexT" onclick="NextPage()">Next</button>
+				<a href="gallery.html"><br>
+
+				<button type="button" name="Next" id="Gallery" onclick="">Open Gallery</button>
+			</a>
+				<div class="rules">
+					Please dont open gallery once you start drawing you'll drawings will not be saved
+				</div>
+
+			</div>
+		</div>
+		<div class="shapesSelector">
+			<div id="shelves">
+
+			</div>
+			<div class="Instructions">
+					<h2>	Try to express the above shown feeling through these shapes and colours.
+						</h2>
+						First select a color and then a shape and place them on the Canvas.
+			</div>
+		</div>
+	</div>
+	</body>
+<script src="index.js" charset="utf-8"></script>
+<script src="shapes.js" charset="utf-8"></script>
+</html>

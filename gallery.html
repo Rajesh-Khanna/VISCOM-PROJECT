@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gallery</title>
+  </head>
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+  <script type="text/javascript" src = 'node_modules/svg.js/dist/svg.min.js'></script>
+
+  <style media="screen">
+    #ShowBoard{
+      visibility: hidden;
+    }
+    svg{
+      position: absolute;
+    }
+    ol {
+        list-style-type: none;
+        margin-left: 4em;
+    }
+    li{
+      margin: 1em;
+      float: left;
+      list-style-type: none;
+      display: inline-block;
+      font-style: oblique;
+      font-family: cursive;
+      text-align: center;
+      box-shadow: 0 0 5px -2px;
+    }
+    img{
+      width: 240px;
+      height: 150px;
+      padding-bottom: 2em;
+    }
+    button{
+      border: none;
+      padding: 0.5em 1.5em;
+      background-color: #ffd42a;
+      font-family: cursive;
+      font-style: oblique;
+      font-size: 200%;
+      color: #fff;
+      border-radius: 10px;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+    button:hover{
+      cursor: pointer;
+      box-shadow: 0 0 10px  #ffb82b;
+    }
+    a{
+      color: #ffd42a;
+      font-family: cursive;
+      text-decoration: none;
+      font-style: oblique;
+      font-size: 130%;
+      right: 100%;
+      margin: 1em;
+    }
+    a:hover{
+      color: #ff5121;
+    }
+    #loading{
+      width: 20%;
+      height: 40%;
+      position: fixed;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <body>
+    <button type="button" name="button" onclick="initiat()" style=" visibility:hidden">Open Gallery</button>
+    <a href="index.html">Go back to Canvas</a>
+    <ol id="l">
+    </ol>
+    <img src="loading.gif" alt="" id="loading">
+    <div id="ShowBoard">
+    </div>
+  </body>
+  <script src="gallery.js" charset="utf-8"></script>
+</html>
