@@ -1,6 +1,6 @@
 var sw = 800,sh = 500;
 var images = [];
-cnt = [[],];
+cnt = [];
 EMOTIONS = ['Happy','Anger','Fear','Sad','Disgust','Wonder'];
 var draw2;
 var element,x,y;
@@ -38,7 +38,7 @@ const docRef = firestore.collection("gallery");
     if(activeShape){
       if(event.key == "Delete"){
         activeShape.kill();
-        cnt[images.length].splice(cnt.indexOf(activeShape.shape()),1);
+        cnt.splice(cnt.indexOf(activeShape.shape()),1);
       }
       if(event.key == "x" || event.key == "X")
         document.getElementById("skewx").checked = !document.getElementById("skewx").checked;
@@ -142,7 +142,7 @@ var fig;
 function painting(event){
   if(selectStatus){
     activeShape = new shapes(shape,event);
-    cnt[images.length].push(shape);
+    cnt.push(shape);
   }
 //  fig = draw2.ellipse(60 ,60).stroke({ color: '#f06', width: 10}).fill("#fff");
 }
@@ -163,7 +163,6 @@ function NextPage(){
   var ig = draw2.svg();
   // document.getElementById("gallery").innerHTML += ig;
   images.push(ig);
-  cnt.push([]);
   elem = [];
   if(images.length == EMOTIONS.length-1){
     np.innrHTML = "Finish";
