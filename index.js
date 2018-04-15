@@ -172,7 +172,7 @@ function NextPage(){
   console.log(elem);
   setup();
   var em = document.getElementsByClassName("emotions")[0];
-  em.innerHTML = 'Emotions: '+EMOTIONS[images.length] +" "+(i+1).toString()+"/6";
+  em.innerHTML = 'Emotions: '+EMOTIONS[images.length] +" "+(images.length+1).toString()+"/6";
 }
   draw2.on('click',function(){
   if(selectStatus == true){
