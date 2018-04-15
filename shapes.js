@@ -1,4 +1,5 @@
 function shapes(shape,event){
+  this.shape = shape;
   this.scalex = 1;
   this.scaley = 1;
   this.state = 0;
