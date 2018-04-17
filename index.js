@@ -52,7 +52,7 @@ const docRef = firestore.collection("gallery");
   shape_display();
 
   setup();
-alert("Please Zoom out a little if your using windows for better resolution. ctrl + 'minus' to zoom out");
+alert("Please Zoom out a little if your using windows for better resolution. ctrl + 'minus' to zoom out 75% generally works");
 })()
 
 function setup(){
