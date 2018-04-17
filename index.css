@@ -30,7 +30,7 @@ body,html{
 }
 #drawboard{
   position: relative;
-  background: #deacff;
+/*   background: #deacff; */
 }
 #drawboard>canvas{
   position:absolute;
