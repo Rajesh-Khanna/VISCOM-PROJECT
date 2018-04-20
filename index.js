@@ -81,6 +81,13 @@ function setup(){
 
 }
 
+window.onresize = function(){
+  element = document.getElementById('drawboard');
+  position = element.getBoundingClientRect();
+  x = position.left;
+  y = position.top;
+};
+
 function changeColor(){
   var Hue = document.getElementById('Hue');
   var Saturation = document.getElementById('Saturation');
