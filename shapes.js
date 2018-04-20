@@ -35,12 +35,18 @@ function shapes(shape,event){
           activeShape.scalex+=(event.deltaY/100);  
       }
       if(  document.getElementById("skewy").checked == true){
-        activeShape.scaley+=event.deltaY/10;
+       if(event.deltaY!=125)
+          activeShape.scalex+=(event.deltaY/10);
+        else
+          activeShape.scalex+=(event.deltaY/100);  
       }
       activeShape.fig.transform({ scaleX : activeShape.scalex ,scaleY: activeShape.scaley});
     }
     if(  document.getElementById("rotate").checked == true)
-      activeShape.fig.transform({rotation: event.deltaY/10, relative: true});
+       if(event.deltaY!=125)
+          activeShape.fig.transform({rotation: event.deltaY/10, relative: true});
+        else
+          activeShape.fig.transform({rotation: event.deltaY/100, relative: true});
   });
   this.Move = function(event){
     this.fig.transform({ x : event.clientX-x- activeShape.fig.width()*this.scalex/2}).transform({ y : event.clientY-y-activeShape.fig.height()*this.scaley/2});
