@@ -86,6 +86,9 @@ window.onresize = function(){
   position = element.getBoundingClientRect();
   x = position.left;
   y = position.top;
+  console.log(x);
+  console.log(y);
+  
 };
 
 function changeColor(){
