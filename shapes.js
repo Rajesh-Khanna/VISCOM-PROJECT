@@ -36,9 +36,9 @@ function shapes(shape,event){
       }
       if(  document.getElementById("skewy").checked == true){
        if(event.deltaY!=125)
-          activeShape.scalex+=(event.deltaY/10);
+          activeShape.scaley+=(event.deltaY/10);
         else
-          activeShape.scalex+=(event.deltaY/100);  
+          activeShape.scaley+=(event.deltaY/100);  
       }
       activeShape.fig.transform({ scaleX : activeShape.scalex ,scaleY: activeShape.scaley});
     }
