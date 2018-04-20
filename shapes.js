@@ -24,13 +24,15 @@ function shapes(shape,event){
       ractivate(this.id);
   });
   this.fig.on('wheel',function(event){
-    console.log(event.deltaY);
     if((activeShape.scalex+event.deltaY/10 < 0.1) || (activeShape.scaley+event.deltaY/10 < 0.1)){
       console.log(event.deltaY);
     }else{
       if(document.getElementById("skewx").checked == true)
       {
-        activeShape.scalex+=(event.deltaY/10);
+        if(event.deltaY!=125)
+          activeShape.scalex+=(event.deltaY/10);
+        else
+          activeShape.scalex+=(event.deltaY/100);  
       }
       if(  document.getElementById("skewy").checked == true){
         activeShape.scaley+=event.deltaY/10;
