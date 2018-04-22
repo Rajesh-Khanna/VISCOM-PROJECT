@@ -169,6 +169,7 @@ function paintmovie(event){
 function ractivate(i){
   //elem[i].state = 2;
   activeShape = elem[i];
+  activeShape.changeColor();
 }
 function NextPage(){
   var np = document.getElementById("NexT");
