@@ -138,7 +138,7 @@ function shape_display(){
   }
 }
 function colorBoard(){
-    a = ['#000000','#4d4d4d','#662200','#6b6b47','#e6beff',' #ff0000','#d2f53c','#911eb4','#ffff00','#33cc33','#3399ff',' #b3d9ff'];
+    a = ['#000000','#4d4d4d','#662200','#6b6b47','#507d2a','#a50000',' #ff0000','#191970','#ffff00','#33cc33','#3399ff',' #b3d9ff'];
     b = document.getElementsByClassName('clselector')[0];
     l = b.getElementsByTagName('li');
     for(i=0;i<a.length;i++){
