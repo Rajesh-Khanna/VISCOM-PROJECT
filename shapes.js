@@ -56,4 +56,12 @@ function shapes(shape,event){
     this.fig.remove();
     //elem.splice(d, 1);
   }
+    this.changeColor = function(){
+	if(shape<5 || shape == db.length)
+		this.fig.fill(selectedColor);
+    else{
+      this.fig.fill('none');
+      this.fig.stroke({ color: selectedColor, width: 10});
+    }  
+  }
 }
