@@ -71,13 +71,19 @@
 			</div>
 			<div class="skewing">
 				<label for="skewx">Zoom x </label>
-				<input type="checkbox" name="skewx" id="skewx">
+				<input type="checkbox" class = "cb" name="skewx" id="skewx">
+				<input type="range" min="1" max="80" value="10" class="slider" id="sx">
+				
 				<br/>
 				<label for="skewy">Zoom y </label>
-				<input type="checkbox" name="skewy" id="skewy">
+				<input type="checkbox" name="skewy" class = "cb" id="skewy">
+				<input type="range" min="1" max="80" value="10" class="slider" id="sy">
+				
 				<br/>
-				<label for="rotate">Rotate </label>
-				<input type="checkbox" name="rotate" id="rotate">
+				<label for="rotate">Rotate </label>				
+				<input type="checkbox" name="rotate" id="rotate" class = "cb">
+				<input type="range" min="-180" max="180" value="0" class="slider" id="R">		
+
 			</div>
 			<br>
 			<div class="rules">
