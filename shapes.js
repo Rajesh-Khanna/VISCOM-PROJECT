@@ -53,6 +53,7 @@ function shapes(shape,event){
   }
   this.kill = function(){
     var d = this.fig.id;
+    console.log("**##**");
     this.fig.remove();
     //elem.splice(d, 1);
   }
