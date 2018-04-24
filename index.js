@@ -83,6 +83,17 @@ function setup(){
   // document.getElementsByClassName("slider")[1].addEventListener("change",changeColor);
   // document.getElementsByClassName("slider")[2].addEventListener("change",changeColor);
 
+  document.getElementById("sx").addEventListener("input",ZoomChange);
+  document.getElementById("sy").addEventListener("input",ZoomChange);
+  document.getElementById("R").addEventListener("input",ZoomChange);
+}
+
+function ZoomChange(){
+	var rx = document.getElementById("sx").value;
+	var ry = document.getElementById("sy").value;
+	var rotat = document.getElementById("R").value;
+	activeShape.fig.transform({ scaleX : activeShape.scalex*rx/10, scaleY : activeShape.scaley*ry/10}).transform({ rotation: rotat});
+
 }
 
 window.onresize = function(){
