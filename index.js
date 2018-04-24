@@ -39,7 +39,9 @@ const docRef = firestore.collection("gallery");
   draw2.addClass('samples');
   window.onkeypress = function(event){
     if(activeShape){
+      console.log(event.key);
       if(event.key == "Delete"){
+        console.log("##***##");
         activeShape.kill();
         cnt.splice(cnt.indexOf(activeShape.shape()),1);
       }
