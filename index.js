@@ -218,6 +218,7 @@ function NextPage(){
 })
 
 function Finish(){
+  document.getElementById("NexT").disabled = true;
   var ig = draw2.svg();
   images.push(ig);
   // alert("Finished");
