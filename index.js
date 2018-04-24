@@ -40,8 +40,7 @@ const docRef = firestore.collection("gallery");
   window.onkeydown = function(event){
     if(activeShape){
       console.log(event.key);
-      if(event.key == "Delete"){
-        console.log("##***##");
+      if(event.key == "D" || event.key == "d"){
         activeShape.kill();
         cnt.splice(cnt.indexOf(activeShape.shape()),1);
       }
