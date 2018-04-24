@@ -50,6 +50,10 @@ function shapes(shape,event){
           activeShape.fig.transform({rotation: event.deltaY/100, relative: true});
 	  */
   });
+  document.getElementById("sx").value=10;
+  document.getElementById("sy").value=10;
+  document.getElementById("R").value=0;
+	
   this.Move = function(event){
     this.fig.transform({ x : event.clientX-x- activeShape.fig.width()*this.scalex/2}).transform({ y : event.clientY-y-activeShape.fig.height()*this.scaley/2});
   }
