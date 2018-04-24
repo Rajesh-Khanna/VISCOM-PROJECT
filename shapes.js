@@ -24,6 +24,7 @@ function shapes(shape,event){
       ractivate(this.id);
   });
   this.fig.on('wheel',function(event){
+	  /*
     if((activeShape.scalex+event.deltaY/10 < 0.1) || (activeShape.scaley+event.deltaY/10 < 0.1)){
       console.log(event.deltaY);
     }else{
@@ -47,6 +48,7 @@ function shapes(shape,event){
           activeShape.fig.transform({rotation: event.deltaY/10, relative: true});
         else
           activeShape.fig.transform({rotation: event.deltaY/100, relative: true});
+	  */
   });
   this.Move = function(event){
     this.fig.transform({ x : event.clientX-x- activeShape.fig.width()*this.scalex/2}).transform({ y : event.clientY-y-activeShape.fig.height()*this.scaley/2});
