@@ -184,6 +184,9 @@ function ractivate(i){
   //elem[i].state = 2;
   activeShape = elem[i];
   activeShape.changeColor();
+  document.getElementById("sx").value=activeShape.fig.transform('scaleX')*10;
+  document.getElementById("sy").value=activeShape.fig.transform('scaleX')*10;
+  document.getElementById("R").value=activeShape.fig.transform('rotation');
 }
 function NextPage(){
   var np = document.getElementById("NexT");
