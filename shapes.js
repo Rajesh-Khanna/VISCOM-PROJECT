@@ -55,7 +55,7 @@ function shapes(shape,event){
     var d = this.fig.id;
     console.log("**##**");
     this.fig.remove();
-    //elem.splice(d, 1);
+    elem.splice(d, 1);
   }
     this.changeColor = function(){
 	if(shape<5 || shape == db.length)
