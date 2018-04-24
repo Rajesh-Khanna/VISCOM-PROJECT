@@ -37,7 +37,7 @@ const docRef = firestore.collection("gallery");
 (function(){
   draw2 = SVG('drawboard').size(sw,sh);
   draw2.addClass('samples');
-  window.onkeypress = function(event){
+  window.onkeydown = function(event){
     if(activeShape){
       console.log(event.key);
       if(event.key == "Delete"){
